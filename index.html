@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eman Gamal Gomaa — Graphic Designer & Video Editor</title>
+    <meta
+      name="description"
+      content="Portfolio of Eman Gamal Gomaa — graphic designer and video editor specializing in brand identity, social media design, motion graphics and video editing."
+    />
+    <meta property="og:title" content="Eman Gamal Gomaa — Graphic Designer & Video Editor" />
+    <meta
+      property="og:description"
+      content="Brand identity, social media design, motion graphics and video editing."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://emangamalgomaa.com" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a href="#top" class="nav__logo" aria-label="Home">
+          <span class="nav__mark">E</span><span data-bind="shortName"></span>
+        </a>
+        <nav class="nav__links" id="navLinks" aria-label="Main">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#process">Process</a>
+          <a href="#contact" class="btn btn--small">Let's talk</a>
+        </nav>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="container hero__inner">
+          <p class="eyebrow reveal"><span class="dot"></span> Available for new projects</p>
+          <h1 class="hero__title reveal">
+            Designing <em>brands</em>,<br />
+            visuals &amp; <em>videos</em><br />
+            that people remember.
+          </h1>
+          <div class="hero__bottom reveal">
+            <p class="hero__intro" data-bind="intro"></p>
+            <div class="hero__actions">
+              <a href="#work" class="btn">View my work</a>
+              <a href="#contact" class="btn btn--ghost">Get in touch</a>
+            </div>
+          </div>
+          <ul class="stats reveal" id="stats"></ul>
+        </div>
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee__track">
+            <span>Brand Identity</span><span>✦</span><span>Social Media</span><span>✦</span>
+            <span>Video Editing</span><span>✦</span><span>Motion Graphics</span><span>✦</span>
+            <span>Print Design</span><span>✦</span><span>Packaging</span><span>✦</span>
+            <span>Brand Identity</span><span>✦</span><span>Social Media</span><span>✦</span>
+            <span>Video Editing</span><span>✦</span><span>Motion Graphics</span><span>✦</span>
+            <span>Print Design</span><span>✦</span><span>Packaging</span><span>✦</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section class="section" id="work">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">01 — Selected work</p>
+            <h2>Projects I'm proud of</h2>
+          </div>
+          <div class="filters reveal" id="filters" role="tablist" aria-label="Filter projects"></div>
+          <div class="grid" id="projects"></div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section section--alt" id="services">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">02 — Services</p>
+            <h2>What I can do for you</h2>
+          </div>
+          <div class="services" id="servicesList"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="container about">
+          <div class="about__photo reveal">
+            <!-- Replace assets/eman.jpg with your photo -->
+            <img src="assets/eman.jpg" alt="Portrait of Eman Gamal Gomaa" loading="lazy"
+                 onerror="this.parentElement.classList.add('about__photo--empty'); this.remove();" />
+            <span class="about__initials">EG</span>
+          </div>
+          <div class="about__content">
+            <p class="eyebrow reveal">03 — About me</p>
+            <h2 class="reveal">Hi, I'm <em data-bind="shortName"></em>.</h2>
+            <div class="about__text reveal" id="aboutText"></div>
+            <h3 class="about__sub reveal">Tools I use every day</h3>
+            <ul class="tools reveal" id="tools"></ul>
+            <div class="about__actions reveal">
+              <a href="#contact" class="btn">Work with me</a>
+              <a href="#" class="btn btn--ghost" id="cvLink" download hidden>Download CV</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="section section--alt" id="process">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">04 — Process</p>
+            <h2>How we'll work together</h2>
+          </div>
+          <ol class="process" id="processList"></ol>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="section" id="experience">
+        <div class="container experience">
+          <div class="section__head reveal">
+            <p class="eyebrow">05 — Experience</p>
+            <h2>My journey so far</h2>
+          </div>
+          <ul class="timeline" id="timeline"></ul>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS (hidden when empty) -->
+      <section class="section section--alt" id="testimonials" hidden>
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Kind words</p>
+            <h2>What clients say</h2>
+          </div>
+          <div class="quotes" id="quotes"></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section contact" id="contact">
+        <div class="container contact__inner">
+          <div class="contact__info">
+            <p class="eyebrow reveal">06 — Contact</p>
+            <h2 class="contact__title reveal">Have a project in mind?<br /><em>Let's make it happen.</em></h2>
+            <p class="reveal">Tell me a bit about your project and I'll get back to you within 24 hours.</p>
+            <ul class="contact__list reveal" id="contactList"></ul>
+            <ul class="socials reveal" id="socials"></ul>
+          </div>
+          <form class="form reveal" id="contactForm">
+            <div class="form__row">
+              <label>Your name<input type="text" name="name" required autocomplete="name" /></label>
+              <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+            </div>
+            <label>
+              I need help with
+              <select name="service">
+                <option>Brand Identity</option>
+                <option>Social Media Design</option>
+                <option>Print & Packaging</option>
+                <option>Video Editing</option>
+                <option>Motion Graphics</option>
+                <option>Something else</option>
+              </select>
+            </label>
+            <label>Project details<textarea name="message" rows="5" required></textarea></label>
+            <button type="submit" class="btn btn--full">Send message</button>
+            <p class="form__note">This opens your email app with the message ready to send.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> <span data-bind="name"></span>. All rights reserved.</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <!-- PROJECT MODAL -->
+    <div class="modal" id="modal" hidden>
+      <div class="modal__backdrop" data-close></div>
+      <article class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal__close" data-close aria-label="Close">×</button>
+        <div class="modal__media" id="modalMedia"></div>
+        <div class="modal__body">
+          <p class="eyebrow" id="modalMeta"></p>
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+          <ul class="tags" id="modalTags"></ul>
+          <div class="modal__gallery" id="modalGallery"></div>
+          <a class="btn btn--ghost" id="modalLink" target="_blank" rel="noopener" hidden>View full project ↗</a>
+        </div>
+      </article>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
